@@ -20,7 +20,7 @@ def add_new_todo():
     todos.append(request_body)
     return todos
 
-@app.route('/todos/<int:Number>')
+@app.route('/todos/<int:Number>', methods=['DELETE'])
 
 def remove_todo(Number):
     del todos[Number]
